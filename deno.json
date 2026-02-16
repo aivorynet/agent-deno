@@ -1,5 +1,5 @@
 {
-  "name": "@aivory/monitor-agent-deno",
+  "name": "@aivorynet/monitor-agent-deno",
   "version": "0.1.0",
   "exports": "./src/mod.ts",
   "tasks": {
