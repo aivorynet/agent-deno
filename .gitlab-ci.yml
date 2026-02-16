@@ -1,0 +1,23 @@
+image: denoland/deno:latest
+
+stages:
+  - lint
+  - test
+  - build
+
+lint:
+  stage: lint
+  script:
+    - deno check src/mod.ts
+
+test:
+  stage: test
+  script:
+    - deno test
+  allow_failure: true
+
+build:
+  stage: build
+  script:
+    - echo "Build step placeholder - Deno modules are published directly from source"
+    - echo "deno.land/x auto-updates from GitHub webhook"

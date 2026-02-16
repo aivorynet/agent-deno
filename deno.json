@@ -1,0 +1,13 @@
+{
+  "name": "@aivory/monitor-agent-deno",
+  "version": "1.0.0",
+  "exports": "./src/mod.ts",
+  "tasks": {
+    "test": "deno test",
+    "check": "deno check src/mod.ts",
+    "run-test": "deno run --allow-net --allow-env test-app.ts"
+  },
+  "compilerOptions": {
+    "strict": true
+  }
+}

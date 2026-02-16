@@ -1,0 +1,14 @@
+# Deno
+.deno/
+
+# Coverage
+coverage/
+cov_profile/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
