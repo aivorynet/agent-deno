@@ -37,4 +37,23 @@ jobs:
           node-version: '22'
           registry-url: 'https://registry.npmjs.org'
       - run: npm install -g npm@latest
+      - name: Generate package.json for npm
+        run: |
+          VERSION=${GITHUB_REF_NAME#v}
+          cat > package.json << EOF
+          {
+            "name": "@aivorynet/monitor-agent-deno",
+            "version": "$VERSION",
+            "description": "AIVory Monitor agent for Deno runtime",
+            "type": "module",
+            "main": "src/mod.ts",
+            "types": "src/mod.ts",
+            "keywords": ["aivory", "monitor", "debugging", "deno"],
+            "author": "AIVory",
+            "license": "MIT",
+            "repository": { "type": "git", "url": "https://github.com/aivorynet/agent-deno.git" },
+            "homepage": "https://aivory.net/monitor/",
+            "bugs": { "url": "https://github.com/aivorynet/agent-deno/issues" }
+          }
+          EOF
       - run: npm publish --access public --provenance
