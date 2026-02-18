@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "exports": "./src/mod.ts",
   "tasks": {
-    "test": "deno test",
+    "test": "deno test src/",
     "check": "deno check src/mod.ts",
     "run-test": "deno run --allow-net --allow-env test-app.ts"
   },
