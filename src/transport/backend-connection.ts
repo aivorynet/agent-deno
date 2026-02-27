@@ -128,7 +128,7 @@ export class BackendConnection {
         hostname: this.config.hostname,
         runtime: 'deno',
         runtime_version: Deno.version.deno,
-        agent_version: '1.0.0',
+        agent_version: '0.1.1',
         environment: this.config.environment
       },
       timestamp: Date.now()

@@ -29,7 +29,7 @@ export class AgentConfig {
 
   constructor(options: ConfigOptions = {}) {
     this.apiKey = options.apiKey || Deno.env.get('AIVORY_API_KEY') || '';
-    this.backendUrl = options.backendUrl || Deno.env.get('AIVORY_BACKEND_URL') || 'wss://api.aivory.net/ws/agent';
+    this.backendUrl = options.backendUrl || Deno.env.get('AIVORY_BACKEND_URL') || 'wss://api.aivory.net/monitor/agent';
     this.environment = options.environment || Deno.env.get('AIVORY_ENVIRONMENT') || 'production';
     this.samplingRate = options.samplingRate ?? parseFloat(Deno.env.get('AIVORY_SAMPLING_RATE') || '1.0');
     this.maxCaptureDepth = options.maxCaptureDepth ?? parseInt(Deno.env.get('AIVORY_MAX_DEPTH') || '10', 10);
